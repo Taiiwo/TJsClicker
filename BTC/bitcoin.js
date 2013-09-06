@@ -1,37 +1,44 @@
 var counter = 0;
 var pickaxes = 0;
-var pickaxeprice = 50;
-var codeallthetime = setInterval(function(){everysecond();}, 1000); // Run code every second
 
-function addone() {
-    counter = (counter + 5);
-    update();
-    if (counter >= 10 && counter <= 24); {
-        $("#message").html("Just 10? lel fag");
-    }
-    if (counter >= 25 && counter <= 49) {
-        $("#message").html("You don't scare me");
-    }
-    if (counter >= 50) {
-        $("#message").html("Seriously you can't do shit with just 50 satoshi");
-    }
-}
-function update() { // Update the stats on the page
-    $("h2").html(pickaxes);
+  function addone() {
+    counter = counter + 10;
     $("h1").html(counter);
-    $("#price").html('$' + pickaxeprice);
-}
 
-function pickaxe() {
-    if (counter >= 50) { // If they have enough
-        pickaxes = pickaxes + 1; // Give them a pickaxe
-        counter = counter - pickaxeprice; // Charge them for it
-	pickaxeprice = pickaxeprice * 1.5// Increase the price
-        update();
+    if (counter == 10) {
+   $("p").html("Just 10? lel fag");
+    }
+     if (counter == 25) {
+   $("p").html("You don't scare me");
+    }
+     if (counter == 50) {
+   $("p").html("This game shall not insult the player anymore");
+    }
+      if (counter == 100) {
+   $("p").html("wow 100 wow");
+    }
+      if (counter == 1000) {
+   $("p").html("You faggot");
+    }
+      if (counter >= 50 ){
+    document.getElementById("pickaxe").disabled = false;
     }
 }
 
-function everysecond() {
-    counter = counter + (1 * pickaxes);
-    update();
-}
+
+  
+  function pickaxe() {
+    pickaxes = pickaxes + 1;
+      $("h2").html(pickaxes);
+      $("h1").html(counter = counter - 50);
+        pickaxeAdd();
+} 
+
+  function pickaxeAdd() {
+    var pickaxeTimer = setInterval(function() {
+      $('h1').html(counter += pickaxes * 0.1);
+        if (pickaxes === 0 ) {
+            clearInterval(pickaxeTimer);
+          }
+      },1000);
+   }
