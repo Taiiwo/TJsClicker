@@ -26,7 +26,7 @@ function pickaxe() {
     if (counter >= pickaxeprice) { // If they have enough
         pickaxes = pickaxes + 1; // Give them a pickaxe
         counter = counter - pickaxeprice; // Charge them for it
-	pickaxeprice = pickaxeprice * 1.5// Increase the price
+        pickaxeprice = Math.round((pickaxeprice * 1.5)*100)/100;// Increase and round the price
         update();
     }
 }
