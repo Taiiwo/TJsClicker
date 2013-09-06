@@ -23,7 +23,7 @@ function update() { // Update the stats on the page
 }
 
 function pickaxe() {
-    if (counter >= 50) { // If they have enough
+    if (counter >= pickaxeprice) { // If they have enough
         pickaxes = pickaxes + 1; // Give them a pickaxe
         counter = counter - pickaxeprice; // Charge them for it
 	pickaxeprice = pickaxeprice * 1.5// Increase the price
