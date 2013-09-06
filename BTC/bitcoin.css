@@ -1,0 +1,37 @@
+html {
+
+  background-color: #795c45;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+#bitcoin {
+
+	position: absolute;
+	margin-right: 0px;
+	margin-left: 0px;
+
+}
+#button, #button1 {
+
+	position:absolute;
+	right: 0px;
+	width: 100px;
+	height: 50px;
+}
+
+#news {
+
+	height: 50px;
+	text-align: center;
+	font-weight: bold;
+}
+
+#stats {
+
+	margin-right: 0px;
+	margin-left: 0px;
+	bottom: 100px;
+
+}
