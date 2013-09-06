@@ -32,6 +32,11 @@ html {
 
 	margin-right: 0px;
 	margin-left: 0px;
-	bottom: 100px;
+	top: 100px;
+	position:absolute;
 
+}
+
+#upgrades {
+	float:right;
 }
