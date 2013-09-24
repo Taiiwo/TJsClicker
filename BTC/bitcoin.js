@@ -39,7 +39,7 @@ function pickaxe() {
         pickaxes = pickaxes + 1; // Give them a pickaxe
 		pickaxedur = pickaxedur + pickaxedurnum;
         counter = counter - pickaxeprice; // Charge them for it
-        pickaxeprice = Math.round((pickaxeprice * (1 + (pickaxes/2)))*100)/100;// Increase and round the price
+        pickaxeprice = Math.round((pickaxeprice * (1 + (pickaxes/10)))*100)/100;// Increase and round the price
         update();
     }
 }
@@ -48,7 +48,7 @@ function drill() {
         drills = drills + 1; // Give them a drill
 		drilldur = drilldur + drilldurnum;
         counter = counter - drillprice; // Charge them for it
-        drillprice = Math.round((drillprice * (1 + drills))*100)/100;// Increase and round the price
+        drillprice = Math.round((drillprice * (1 + (drills/10)) )*100)/100;// Increase and round the price
         update();
     }
 }
@@ -56,7 +56,7 @@ function cursor() {
     if (counter >= cursorprice) { // If they have enough
         cursors++; // Give them a cursor
         counter = counter - cursorprice; // Charge them for it
-        cursorprice = Math.round((cursorprice * (1 + cursors))*100)/100;// Increase and round the price
+        cursorprice = Math.round((cursorprice * (1 + (cursors/10)))*100)/100;// Increase and round the price
         update();
     }
 }
