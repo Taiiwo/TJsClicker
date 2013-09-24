@@ -1,39 +1,37 @@
 html {
-
-  background-color: #795c45;
-  padding: 0;
-  margin: 0;
-  border: 0;
+	font-family: 'Roboto Slab', serif;
+	background-color: #795c45;
+	padding: 0;
+	margin: 0;
+	border: 0;
 }
 
 #bitcoin {
-
-	position: absolute;
-	margin-right: 0px;
-	margin-left: 0px;
-
-}
-#button, #button1 {
-
 	position:absolute;
-	right: 0px;
-	width: 100px;
-	height: 50px;
+	margin:auto;
+	text-align: center;
+	top:40px;
+}
+#mine{
+	text-align:center;
+	margin:auto;
+	width:200px;
+	height:150px;
 }
 
 #news {
-
-	height: 50px;
+	width:33.3333%;
 	text-align: center;
 	font-weight: bold;
 }
 
 #stats {
-
+	text-align:center;
 	margin-right: 0px;
 	margin-left: 0px;
 	top: 100px;
 	position:absolute;
+	
 
 }
 
