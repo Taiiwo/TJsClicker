@@ -1,11 +1,15 @@
 var counter = 0;
 var pickaxes = 0;
-var pickaxeprice = 2;
+var pickaxeprice = 5;
+var pickaxedurnum = 100;
+var pickaxedur = 0;
 var drills = 0;
 var drillprice = 20;
+var drilldurnum = 75;
+var drilldur = 0;
 var cursors=1;
-var cursorprice=5;
-var codeallthetime = setInterval(function(){everysecond();}, 10); // Run code every second
+var cursorprice=10;
+var codeallthetime = setInterval(function(){everysecond();}, 10); // Run code every 10 milisecods
 
 function addone() {
     counter = (counter + (cursors/10));
@@ -33,6 +37,7 @@ function update() { // Update the stats on the page
 function pickaxe() {
     if (counter >= pickaxeprice) { // If they have enough
         pickaxes = pickaxes + 1; // Give them a pickaxe
+		pickaxedur = pickaxedur + pickaxedurnum;
         counter = counter - pickaxeprice; // Charge them for it
         pickaxeprice = Math.round((pickaxeprice * 1.5)*100)/100;// Increase and round the price
         update();
@@ -41,6 +46,7 @@ function pickaxe() {
 function drill() {
     if (counter >= drillprice) { // If they have enough
         drills = drills + 1; // Give them a drill
+		drilldur = drilldur + drilldurnum;
         counter = counter - drillprice; // Charge them for it
         drillprice = Math.round((drillprice * 2)*100)/100;// Increase and round the price
         update();
@@ -55,6 +61,18 @@ function cursor() {
     }
 }
 function everysecond() {
-    counter = counter + (0.001 * pickaxes) + (0.005 * drills);
+    counter = counter + (0.0005 * pickaxes);
+	counter = counter + (0.001 * drills);
+	
+	pickaxedur = pickaxedur - (0.01 * pickaxes);
+	if (pickaxedur <= 0 && pickaxes > 0) {
+		pickaxes = pickaxes - 1;
+	}
+	drilldur = drilldur - (0.01 * drills);
+	if (drill <= 0 && drills > 0) {
+		drill = drill - 1;
+	}
+	
+	
     update();
 }
