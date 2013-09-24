@@ -40,3 +40,14 @@ html {
 #upgrades {
 	float:right;
 }
+.statunit {
+	float:right;
+	vertical-align:super;
+	position:static;
+}
+.statnum {
+	float: left;
+	position:static;
+	vertical-align:sub;
+	font-size: 28px;
+}
