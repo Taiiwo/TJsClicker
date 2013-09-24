@@ -31,7 +31,6 @@ html {
 	margin-left: 0px;
 	top: 100px;
 	position:absolute;
-	
 
 }
 
@@ -44,7 +43,6 @@ html {
 	position:static;
 }
 .statnum {
-	float: left;
 	position:static;
 	vertical-align:sub;
 	font-size: 28px;

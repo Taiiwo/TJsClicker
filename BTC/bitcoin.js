@@ -39,7 +39,7 @@ function pickaxe() {
         pickaxes = pickaxes + 1; // Give them a pickaxe
 		pickaxedur = pickaxedur + pickaxedurnum;
         counter = counter - pickaxeprice; // Charge them for it
-        pickaxeprice = Math.round((pickaxeprice * 1.5)*100)/100;// Increase and round the price
+        pickaxeprice = Math.round((pickaxeprice * (1 + (pickaxes/2)))*100)/100;// Increase and round the price
         update();
     }
 }
@@ -48,7 +48,7 @@ function drill() {
         drills = drills + 1; // Give them a drill
 		drilldur = drilldur + drilldurnum;
         counter = counter - drillprice; // Charge them for it
-        drillprice = Math.round((drillprice * 2)*100)/100;// Increase and round the price
+        drillprice = Math.round((drillprice * (1 + drills))*100)/100;// Increase and round the price
         update();
     }
 }
@@ -56,7 +56,7 @@ function cursor() {
     if (counter >= cursorprice) { // If they have enough
         cursors++; // Give them a cursor
         counter = counter - cursorprice; // Charge them for it
-        cursorprice = Math.round((cursorprice * 2)*100)/100;// Increase and round the price
+        cursorprice = Math.round((cursorprice * (1 + cursors))*100)/100;// Increase and round the price
         update();
     }
 }
@@ -65,11 +65,11 @@ function everysecond() {
 	counter = counter + (0.001 * drills);
 	
 	pickaxedur = pickaxedur - (0.01 * pickaxes);
-	if (pickaxedur <= 0 && pickaxes > 0) {
+	if (pickaxedur <= (pickaxedurnum * pickaxes) - pickaxedurnum && pickaxes > 0) {
 		pickaxes = pickaxes - 1;
 	}
 	drilldur = drilldur - (0.01 * drills);
-	if (drill <= 0 && drills > 0) {
+	if (drill <= (drilldurnum * drills) - drilldurnum && drills > 0) {
 		drill = drill - 1;
 	}
 	
