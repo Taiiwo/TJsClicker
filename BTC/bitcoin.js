@@ -99,4 +99,3 @@ function everysecond() {
 	}
 	update();
 }
-$("#mine").keypress(addone());
