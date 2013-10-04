@@ -1,6 +1,5 @@
 var counter = 0;
 var codeallthetime = setInterval(function(){everysecond();}, 10); // Run code every 10 milisecods
-
 var items = [
 		{
 			'name':'Pickaxe',
@@ -100,3 +99,4 @@ function everysecond() {
 	}
 	update();
 }
+$("#mine").keypress(addone());
